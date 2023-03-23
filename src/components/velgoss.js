@@ -23,7 +23,7 @@ const features = [
   {
     name: 'Rask leveranse',
     description:
-      'Leveransen på klistremerkene er rask, og vi leverer alltid innen tre uker inkludert oppsett, produksjon og shipping',
+      'Leveransen på klistremerkene er rask, og vi leverer innen tre uker inkludert oppsett, produksjon og shipping',
     icon: PaperAirplaneIcon,
   },
 ]
