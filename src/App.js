@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ArrowDownCircleIcon, ArrowDownIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Velgoss from './components/velgoss'
 import Priskalkulator from './components/priskalkulator'
 import Footer from './components/footer'
+import Scroll from 'react-scroll-to-element';
+
 
 const navigation = [
   { name: 'Produkt', href: '#' },
@@ -13,7 +15,9 @@ const navigation = [
 ]
 
 export default function App() {
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
 
   return (
     <div>
@@ -118,7 +122,7 @@ export default function App() {
             </defs>
           </svg>
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl pt-32 pb-16 sm:py-48 lg:py-56">
           <div className="text-center">
             <img className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl" src="https://i.ibb.co/8D84dVK/U28w3h-Ms-2x.png">
             </img>
@@ -126,16 +130,15 @@ export default function App() {
               Vi leverer kvalitets klistremerker i vinyl og mange størrelser til en fjerdedel av markedspris.
 
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-[#473b2b] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#9b8365] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Kom igang
-              </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                Lær mer <span aria-hidden="true">→</span>
-              </a>
+            <div className="mt-10 items-center justify-center gap-x-6">
+            <Scroll type="class" element="priskalkulator" offset={300}>
+              <div>
+              <button href="#" className="text-lg font-semibold leading-6 text-[#473b2b] hover:cursor-pointer">
+                Lær mer
+              </button>
+              <ArrowDownIcon className='w-7 mt-3 mx-auto animate-bounce-slow'/>
+              </div>
+            </Scroll>
             </div>
           </div>
         </div>
@@ -149,7 +152,7 @@ export default function App() {
               fillOpacity=".3"
               d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
             />
-            <defs>
+            <defs class="priskalkulator">
               <linearGradient
                 id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
                 x1="1155.49"
@@ -168,7 +171,7 @@ export default function App() {
     </div>
     <Velgoss /> 
     <Priskalkulator />
-    <div>
+    <div class="priskalkulator">
     <div className="flex flex-col items-center justify-center">
     <h1 className="text-4xl font-semibold tracking-tight text-[#473b2b] sm:text-6xl">Hvordan betale?</h1>
     <p className="mt-6 text-lg leading-8 text-gray-600 px-8 text-center">
