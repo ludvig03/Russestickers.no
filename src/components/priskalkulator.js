@@ -6,7 +6,7 @@ import 'react-dropdown/style.css';
 
 export default function Priskalkulator() {
 
-    const [state, setState] = useState({ x: 750});
+    const [state, setState] = useState({ x: 1000});
     const [pris, setPris] = useState(0);
     const [str, setStr] = useState(0.8);
 
@@ -54,7 +54,7 @@ export default function Priskalkulator() {
                 },
                 }}
                 axis="x"
-                xmin={750}
+                xmin={1000}
                 xmax={15000}
                 xstep={500}
                 x={state.x}
