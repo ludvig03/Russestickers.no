@@ -35,7 +35,7 @@ export default function App() {
               />
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="hidden">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
