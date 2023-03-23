@@ -63,7 +63,7 @@ export default function Priskalkulator() {
             <a className='pl-2 w-1/4 text-center'>{state.x} stickers</a>
             </div>
 
-            <div className='flex justify-center mt-4 mb-28 text-xl font-semibold text-[#473b2b]'>
+            <div className='flex justify-center mt-4 mb-12 text-xl font-semibold text-[#473b2b]'>
             Total pris: {Math.round(pris / 50)*50-1} kr
             </div>
 

@@ -5,6 +5,7 @@ import Velgoss from './components/velgoss'
 import Priskalkulator from './components/priskalkulator'
 import Footer from './components/footer'
 import Scroll from 'react-scroll-to-element';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 const navigation = [
@@ -45,11 +46,18 @@ export default function App() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-                {item.name}
+              <a href="#produkt" onClick={() => console.log("yo")} className="text-sm font-semibold leading-6 text-gray-900">
+                Produkt
               </a>
-            ))}
+              <a className="text-sm font-semibold leading-6 text-gray-900">
+                Priskalkulator
+              </a>
+              <a className="text-sm font-semibold leading-6 text-gray-900">
+                Bestilling
+              </a>
+              <a className="text-sm font-semibold leading-6 text-gray-900">
+                Shipping
+              </a>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -171,8 +179,19 @@ export default function App() {
     </div>
     <Velgoss /> 
     <Priskalkulator />
-    <div class="priskalkulator">
-    <div className="flex flex-col items-center justify-center">
+    <div className='flex'>
+      <div className="flex flex-col items-center justify-center">
+        <img src="https://i.ibb.co/QCzKC3p/image0.jpg" className=" mx-auto"></img>
+      </div>
+      <div>
+        <p className="mt-8 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Tidligere bestilling
+        </p>
+        <p className="text-sm mr-4 text-gray-600">Her ser du et eksempel på en tidligere bestilling hos oss, på bildet ligger det 250 stickers i størrelse 6cm</p>
+      </div>
+    </div>
+    <div>
+    <div className="flex flex-col items-center justify-center mt-12">
     <h1 className="text-4xl font-semibold tracking-tight text-[#473b2b] sm:text-6xl">Hvordan betale?</h1>
     <p className="mt-6 text-lg leading-8 text-gray-600 px-8 text-center">
       Etter avtale på instagram kan du vippse den avtalte summen til dette vipps nummeret
