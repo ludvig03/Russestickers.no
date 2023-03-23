@@ -20,8 +20,12 @@ export default function Priskalkulator() {
   return (
     <div className="bg-white pt-8 sm:py-28">
         <div className='mx-auto'>
+            <div className='flex ml-6 mb-10'>
+                <h1 className="text-3xl text-[#473b2b] font-semibold">Priskalkulator</h1>
+            </div>
+
             <div className='flex justify-center'>
-                <h1 className="text-3xl text-[#473b2b] font-semibold">Velg en størrelse:</h1>
+                <h1 className="text-lg text-[#473b2b] font-semibold">Velg en størrelse:</h1>
             </div>
 
             <select value={str} onChange={e=>setStr(e.target.value)} id="str" className='flex mx-auto mt-4 border-2 p-1 rounded-md bg-gray-200'>
