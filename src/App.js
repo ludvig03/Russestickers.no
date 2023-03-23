@@ -194,7 +194,7 @@ export default function App() {
     <div className="flex flex-col items-center justify-center mt-12">
     <h1 className="text-4xl font-semibold tracking-tight text-[#473b2b] sm:text-6xl">Hvordan betale?</h1>
     <p className="mt-6 text-lg leading-8 text-gray-600 px-8 text-center">
-      Etter avtale på instagram kan du vippse den avtalte summen til dette vipps nummeret
+      Etter avtale på instagram kan du vippse den avtalte summen til dette vipps nummeret. Og så sender vi deg en bekreftelse på at vi har mottatt betalingen!
     </p>
     </div>
       <img className="w-72 mx-auto" src="https://i.ibb.co/XyvpSbS/Screenshot-2023-03-23-at-14-25-21.png"></img>
