@@ -6,7 +6,7 @@ import 'react-dropdown/style.css';
 
 export default function Priskalkulator() {
 
-    const [state, setState] = useState({ x: 1000});
+    const [state, setState] = useState({ x: 750});
     const [pris, setPris] = useState(0);
     const [str, setStr] = useState(0.8);
 
@@ -26,7 +26,7 @@ export default function Priskalkulator() {
 
             <select value={str} onChange={e=>setStr(e.target.value)} id="str" className='flex mx-auto mt-4 border-2 p-1 rounded-md bg-gray-200'>
                 <option value="0.8">3,5cm</option>
-                <option value="1">6cm (standard)</option>
+                <option value="1" selected>6cm (standard)</option>
                 <option value="1.3">9cm</option>
                 <option value="2">12.5cm</option>
             </select>
@@ -54,7 +54,7 @@ export default function Priskalkulator() {
                 },
                 }}
                 axis="x"
-                xmin={1000}
+                xmin={750}
                 xmax={15000}
                 xstep={500}
                 x={state.x}
