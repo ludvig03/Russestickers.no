@@ -187,7 +187,7 @@ const navigation = {
                     type="submit"
                     className="flex w-full items-center justify-center rounded-md bg-[#473b2b] py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-[#9b8365] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    Subscribe
+                    Kontakt oss
                   </button>
                 </div>
               </form>
@@ -203,7 +203,7 @@ const navigation = {
               ))}
             </div>
             <p className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0">
-              &copy; 2020 Your Company, Inc. All rights reserved.
+              &copy; 2023 Russesrickers.no, 927 186 535.
             </p>
           </div>
         </div>

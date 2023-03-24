@@ -69,7 +69,7 @@ export default function App() {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">Russestickers.no</span>
                 <img
                   className="h-16 w-auto"
                   src="https://i.ibb.co/18XRb9Q/logo.png"
@@ -142,7 +142,7 @@ export default function App() {
             <Scroll type="class" element="priskalkulator" offset={300}>
               <div>
               <button href="#" className="text-lg font-semibold leading-6 text-[#473b2b] hover:cursor-pointer">
-                Lær mer
+                Les mer
               </button>
               <ArrowDownIcon className='w-7 mt-3 mx-auto animate-bounce-slow'/>
               </div>

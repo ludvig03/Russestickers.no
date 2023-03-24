@@ -60,7 +60,7 @@ export default function Priskalkulator() {
                 axis="x"
                 xmin={1000}
                 xmax={15000}
-                xstep={500}
+                xstep={250}
                 x={state.x}
                 onChange={({ x }) => setState(state => ({ ...state, x }))}
             />
