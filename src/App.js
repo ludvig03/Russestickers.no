@@ -5,7 +5,6 @@ import Velgoss from './components/velgoss'
 import Priskalkulator from './components/priskalkulator'
 import Footer from './components/footer'
 import Scroll from 'react-scroll-to-element';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 const navigation = [
@@ -178,18 +177,18 @@ export default function App() {
       </div>
     </div>
     <Priskalkulator />
-    <Velgoss /> 
-    <div className='flex'>
+    <div className='flex mb-10'>
       <div className="flex flex-col items-center justify-center">
         <img src="https://i.ibb.co/QCzKC3p/image0.jpg" className=" mx-auto"></img>
       </div>
-      <div>
+      <div className='pr-2 pb-6 my-auto'>
         <p className="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Tidligere bestilling
         </p>
         <p className="text-sm mr-4 text-gray-600">Her ser du et eksempel på en tidligere bestilling hos oss, på bildet ligger det 250 stickers i størrelse 6cm</p>
       </div>
     </div>
+    <Velgoss /> 
     <div>
     <div className="flex flex-col items-center justify-center mt-12">
     <h1 className="text-4xl font-semibold tracking-tight text-[#473b2b] sm:text-6xl">Hvordan betale?</h1>
