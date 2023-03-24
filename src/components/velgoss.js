@@ -46,7 +46,7 @@ export default function Velgoss() {
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute mt-1 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-[#473b2b]">
+                  <div className="absolute mt-1 left-0 flex h-10 w-10 items-center justify-center shadow-md rounded-lg bg-gradient-to-t from-[#bdb6d8] to-sky-300">
                     <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   {feature.name}
