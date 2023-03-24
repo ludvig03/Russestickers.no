@@ -139,7 +139,7 @@ export default function App() {
 
             </p>
             <div className="mt-10 items-center justify-center gap-x-6">
-            <Scroll type="class" element="priskalkulator" offset={300}>
+            <Scroll type="class" element="lesmer" offset={-30}>
               <div>
               <button href="#" className="text-lg font-semibold leading-6 text-[#473b2b] hover:cursor-pointer">
                 Les mer
@@ -160,7 +160,7 @@ export default function App() {
               fillOpacity=".3"
               d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
             />
-            <defs class="priskalkulator">
+            <defs>
               <linearGradient
                 id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
                 x1="1155.49"
@@ -177,8 +177,8 @@ export default function App() {
         </div>
       </div>
     </div>
-    <Velgoss /> 
     <Priskalkulator />
+    <Velgoss /> 
     <div className='flex'>
       <div className="flex flex-col items-center justify-center">
         <img src="https://i.ibb.co/QCzKC3p/image0.jpg" className=" mx-auto"></img>
