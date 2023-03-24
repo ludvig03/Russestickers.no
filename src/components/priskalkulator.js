@@ -29,11 +29,11 @@ export default function Priskalkulator() {
             </div>
 
             <select value={str} onChange={e=>setStr(e.target.value)} id="str" className='flex mx-auto mt-4 border-2 p-1 rounded-md bg-gray-200'>
-                <option value="0.8">3,8cm</option>
-                <option value="0.9" selected>5.1cm</option>
-                <option value="1" selected>6.4cm (standard)</option>
-                <option value="1.2" selected>7.5cm</option>
-                <option value="1.3">9cm</option>
+                <option value="0.9">3,8cm</option>
+                <option value="1" selected>5.1cm</option>
+                <option value="1.1" selected>6.4cm (standard)</option>
+                <option value="1.3" selected>7.5cm</option>
+                <option value="1.6">9cm</option>
                 <option value="2.2">12.5cm</option>
             </select>
 
