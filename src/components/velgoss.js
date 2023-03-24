@@ -31,7 +31,7 @@ const features = [
 export default function Velgoss() {
   return (
     <div className="bg-white pt-24 pb-8 sm:py-32" class="lesmer">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl pb-8 px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-[#473b2b]">Du bestemmer</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
