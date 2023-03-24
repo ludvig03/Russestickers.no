@@ -140,10 +140,10 @@ export default function App() {
             <div className="mt-10 items-center justify-center gap-x-6">
             <Scroll type="class" element="lesmer" offset={-30}>
               <div>
-              <button href="#" className="text-lg font-semibold leading-6 text-[#473b2b] hover:cursor-pointer">
+              <button href="#" className="text-lg font-semibold leading-6 text-gray-500 hover:cursor-pointer">
                 Les mer
               </button>
-              <ArrowDownIcon className='w-7 mt-3 mx-auto animate-bounce-slow'/>
+              <ArrowDownIcon className='w-7 mt-3 mx-auto animate-bounce-slow text-gray-500'/>
               </div>
             </Scroll>
             </div>
@@ -176,17 +176,19 @@ export default function App() {
         </div>
       </div>
     </div>
+    <div className='block'>
     <Priskalkulator />
     <div className='flex mb-10'>
       <div className="flex flex-col items-center justify-center">
         <img src="https://i.ibb.co/QCzKC3p/image0.jpg" className=" mx-auto"></img>
       </div>
       <div className='pr-2 pb-6 my-auto'>
-        <p className="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <p className="mt-6 text-2xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#52BEF5] to-sky-300 sm:text-4xl">
           Tidligere bestilling
         </p>
         <p className="text-sm mr-4 text-gray-600">Her ser du et eksempel på en tidligere bestilling hos oss, på bildet ligger det 250 stickers i størrelse 6cm</p>
       </div>
+    </div>
     </div>
     <Velgoss /> 
     <div>

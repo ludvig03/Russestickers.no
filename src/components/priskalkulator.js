@@ -21,11 +21,11 @@ export default function Priskalkulator() {
     <div className="bg-white pt-16 sm:py-28">
         <div className='mx-auto'>
             <div className='flex ml-6 mb-10'>
-                <h1 className="text-3xl text-[#473b2b] font-semibold">Priskalkulator</h1>
+                <h1 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#52BEF5] to-sky-300 font-semibold">Priskalkulator</h1>
             </div>
 
             <div className='flex justify-center'>
-                <h1 className="text-lg text-[#473b2b] font-semibold">Velg en størrelse:</h1>
+                <h1 className="text-lg text-gray-500 font-semibold">Velg en størrelse:</h1>
             </div>
 
             <select value={str} onChange={e=>setStr(e.target.value)} id="str" className='flex mx-auto mt-4 border-2 p-1 rounded-md bg-gray-200'>
@@ -48,12 +48,12 @@ export default function Priskalkulator() {
                     backgroundColor: '#ccc',
                 },
                 active: {
-                    backgroundColor: '#9b8365',
+                    backgroundColor: '#52BEF5',
                 },
                 thumb: {
                     width: 30,
                     height: 30,
-                    backgroundColor: '#473b2b',
+                    backgroundColor: '#5A5A5A',
                 },
                 disabled: {
                     opacity: 0.5,

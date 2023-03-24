@@ -34,7 +34,7 @@ export default function Velgoss() {
       <div className="mx-auto max-w-7xl pb-8 px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-[#473b2b]">Du bestemmer</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#52BEF5] to-sky-300 sm:text-4xl">
             Vi ordner alt fra A til Å
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
