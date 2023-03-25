@@ -73,7 +73,7 @@ export default function Priskalkulator() {
             Vår pris: {Math.round(pris / 50)*50-1} kr
             </div>
             <div className='flex justify-center mt-1 mb-12 text-xs font-semibold text-gray-400'>
-            Markedspris: {Math.round(pris*2.2 / 50)*50-1} kr
+            Markedspris: {Math.round(pris*1.9 / 50)*50-1} kr
             </div>
             
 
