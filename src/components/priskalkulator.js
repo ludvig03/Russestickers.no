@@ -53,7 +53,7 @@ export default function Priskalkulator() {
                 thumb: {
                     width: 30,
                     height: 30,
-                    backgroundColor: '#5A5A5A',
+                    backgroundColor: '#4e5866',
                 },
                 disabled: {
                     opacity: 0.5,
@@ -69,7 +69,7 @@ export default function Priskalkulator() {
             <a className='pl-2 w-1/4 text-center'>{state.x} stickers</a>
             </div>
 
-            <div className='flex justify-center mt-4 text-xl font-semibold text-[#473b2b]'>
+            <div className='flex justify-center mt-4 text-xl font-semibold text-gray-600'>
             Vår pris: {Math.round(pris / 50)*50-1} kr
             </div>
             <div className='flex justify-center mt-1 mb-12 text-xs font-semibold text-gray-400'>

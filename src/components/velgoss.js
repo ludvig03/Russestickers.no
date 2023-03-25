@@ -33,7 +33,7 @@ export default function Velgoss() {
     <div className="bg-white pt-24 pb-8 sm:py-32" class="lesmer">
       <div className="mx-auto max-w-7xl pb-8 px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-[#473b2b]">Du bestemmer</h2>
+          <h2 className="text-base font-semibold leading-7 text-gray-600">Du bestemmer</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#52BEF5] to-sky-300 sm:text-4xl">
             Vi ordner alt fra A til Å
           </p>
@@ -45,7 +45,7 @@ export default function Velgoss() {
           <dl className="grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
+                <dt className="text-base font-semibold leading-7 text-gray-600">
                   <div className="absolute mt-1 left-0 flex h-10 w-10 items-center justify-center shadow-md rounded-lg bg-gradient-to-t from-[#bdb6d8] to-sky-300">
                     <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
