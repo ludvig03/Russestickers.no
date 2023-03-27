@@ -18,7 +18,7 @@ export default function Priskalkulator() {
 
 
   return (
-    <div className="bg-white pt-16 sm:py-28">
+    <div className="bg-white pt-16 sm:py-28 md:pt-16 md:pb-0 md:max-w-2xl mx-auto">
         <div className='mx-auto'>
             <div className='flex ml-6 mb-10'>
                 <h1 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#52BEF5] to-sky-300 font-semibold">Priskalkulator</h1>
@@ -66,7 +66,7 @@ export default function Priskalkulator() {
                 x={state.x}
                 onChange={({ x }) => setState(state => ({ ...state, x }))}
             />
-            <a className='pl-2 w-1/4 text-center'>{state.x} stickers</a>
+            <a className='pl-2 w-1/4 mt-auto text-center'>{state.x} stickers</a>
             </div>
 
             <div className='flex justify-center mt-4 text-xl font-semibold text-gray-600'>

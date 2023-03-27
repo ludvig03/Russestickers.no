@@ -178,7 +178,7 @@ export default function App() {
     </div>
     <div className='block'>
     <Priskalkulator />
-    <div className='flex mb-10'>
+    <div className='flex mb-6 max-w-4xl mx-auto'>
       <div className="flex flex-col items-center justify-center">
         <img src="https://i.ibb.co/QCzKC3p/image0.jpg" className=" mx-auto"></img>
       </div>
@@ -192,7 +192,7 @@ export default function App() {
     </div>
     <Velgoss /> 
     <div>
-    <div className="flex flex-col items-center justify-center mt-12">
+    <div className="flex flex-col items-center justify-center mt-12 max-w-xl mx-auto">
     <h1 className="text-4xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#52BEF5] to-sky-300 sm:text-6xl">Hvordan betale?</h1>
     <p className="mt-6 text-lg leading-8 text-gray-600 px-8 text-center">
       Etter avtale på instagram kan du vippse den avtalte summen til dette vipps nummeret. Og så sender vi deg en bekreftelse på at vi har mottatt betalingen!
