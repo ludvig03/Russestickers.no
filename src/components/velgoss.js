@@ -38,7 +38,7 @@ export default function Velgoss() {
             Vi ordner alt fra A til Å
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Har dere noen ønsker utenom det vanlige? Vi kan produsere gjennomsiktige, metalliske, holografiske, og glitterklistermerker i størrelser opp til 1 meter!
+            Har dere noen ønsker utenom det vanlige? Vi kan produsere gjennomsiktige, metalliske, holografiske, og glitterklistermerker i størrelser opp til 100cm!
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
