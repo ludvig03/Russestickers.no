@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import { ArrowDownCircleIcon, ArrowDownIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ArrowDownCircleIcon, ArrowDownIcon, Bars3Icon, PlusCircleIcon, PlusIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Velgoss from './components/velgoss'
 import Priskalkulator from './components/priskalkulator'
 import Footer from './components/footer'
@@ -16,7 +16,44 @@ const navigation = [
 
 export default function App() {
 
+  const [produkter, setProdukter] = useState([
+    {
+      id: 1,
+      antall: 0,
+      str: 6.4,
+      pris: 0,
+    },
+  ])
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [pris, setPris] = useState(0)
+
+  function addProdukt() {
+    setProdukter([...produkter, {id: produkter.length + 1, antall: 0, str: 6.4, pris: 0}])
+  }
+
+  function removeProdukt(id) {
+    setProdukter(produkter.filter(produkt => produkt.id !== id))
+  }
+
+  function updateProdukt(id, antall, str) {
+    setProdukter(produkter.map(produkt => {
+      if (produkt.id === id) {
+        produkt.antall = antall
+        produkt.str = str
+        produkt.pris = ((1.86-0.13*Math.log(antall))*antall)*str
+      }
+      return produkt
+    }))
+  }
+
+  function getTotalPris() {
+    let totalPris = 0
+    produkter.forEach(produkt => {
+      totalPris += produkt.pris
+    })
+    return totalPris
+  }
 
 
   return (
@@ -177,10 +214,23 @@ export default function App() {
       </div>
     </div>
     <div className='block'>
-    <Priskalkulator />
-    <div className='flex mb-6 max-w-4xl mx-auto'>
-      <div className="flex flex-col items-center justify-center">
-        <img src="https://i.ibb.co/QCzKC3p/image0.jpg" className=" mx-auto"></img>
+    <div className='flex ml-6 mb-10'>
+      <h1 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#52BEF5] to-sky-300 font-semibold">Priskalkulator</h1>
+    </div>
+    {produkter?.map((produkt) => {
+      <Priskalkulator />
+    })}
+    <div onClick={() => {addProdukt()}} className='flex border-2 w-3/4 md:w-1/2 lg:w-1/4 mx-auto rounded-xl hover:cursor-pointer z-50 shadow-md'>
+      <p className='my-auto pl-4 font-semibold'>Legg til klistremerker</p>
+      <div className='ml-auto'><PlusIcon className='w-8 py-2 mr-4'/></div>
+    </div>
+    <div className='flex w-3/4 md:w-1/2 lg:w-1/4 mx-auto mt-6'>
+      <p className='font-semibold text-lg pl-4'>Total:</p>
+      <p className='font-semibold text-lg ml-auto pr-2'>{pris}kr</p>
+    </div>
+    <div className='flex mb-6 mt-20 max-w-4xl mx-auto'>
+      <div className="flex flex-col items-center justify-center pr-8 pl-4">
+        <img src="https://i.ibb.co/smxT8cx/IMG-2206-1.jpg" className=" mx-auto"></img>
       </div>
       <div className='pr-2 pb-6 my-auto'>
         <p className="mt-6 text-2xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#52BEF5] to-sky-300 sm:text-4xl">
