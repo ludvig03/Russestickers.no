@@ -22,19 +22,19 @@ export default function Priskalkulator({id, setProdukter}) {
             setSlider({ xmax: 15000, xmin: 500, xstep: 250, x: 500});
             setCm(3.8);
         } else if (str === "1") {
-            setSlider({ xmax: 15000, xmin: 500, xstep: 250, x: 500});
+            setSlider({ xmax: 12000, xmin: 500, xstep: 250, x: 500});
             setCm(6.4);
         } else if (str === "1.3") {
-            setSlider({ xmax: 12000, xmin: 300, xstep: 100, x: 300});
+            setSlider({ xmax: 10000, xmin: 300, xstep: 100, x: 300});
             setCm(7.5);
         } else if (str === "3") {
-            setSlider({ xmax: 8000, xmin: 300, xstep: 100, x: 300});
+            setSlider({ xmax: 6000, xmin: 300, xstep: 100, x: 300});
             setCm(9);
         } else if (str === "4") {
-            setSlider({ xmax: 3000, xmin: 100, xstep: 50, x: 100});
+            setSlider({ xmax: 2000, xmin: 100, xstep: 50, x: 100});
             setCm(12.5);
         } else if (str === "6") {
-            setSlider({ xmax: 1500, xmin: 50, xstep: 50, x: 50});
+            setSlider({ xmax: 1000, xmin: 50, xstep: 50, x: 50});
             setCm(25);
         }
     }, [str]);
