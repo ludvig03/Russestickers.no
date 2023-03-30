@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import { ArrowDownCircleIcon, ArrowDownIcon, Bars3Icon, PlusCircleIcon, PlusIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ArrowDownCircleIcon, ArrowDownIcon, Bars3Icon, PlusCircleIcon, MinusIcon, PlusIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Velgoss from './components/velgoss'
 import Priskalkulator from './components/priskalkulator'
 import Footer from './components/footer'
@@ -20,40 +20,24 @@ export default function App() {
     {
       id: 1,
       antall: 0,
-      str: 6.4,
+      str: 0.8,
       pris: 0,
+      cm: 3.8,
     },
   ])
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [pris, setPris] = useState(0)
+  const [totalPris, setTotalPris] = useState(0)
 
-  function addProdukt() {
-    setProdukter([...produkter, {id: produkter.length + 1, antall: 0, str: 6.4, pris: 0}])
-  }
+  useEffect(() => {
+    setTotalPris(produkter.reduce((total, produkt) => total + produkt.pris, 0))
+    console.log(produkter)
+  }, [produkter]);
 
-  function removeProdukt(id) {
-    setProdukter(produkter.filter(produkt => produkt.id !== id))
-  }
 
-  function updateProdukt(id, antall, str) {
-    setProdukter(produkter.map(produkt => {
-      if (produkt.id === id) {
-        produkt.antall = antall
-        produkt.str = str
-        produkt.pris = ((1.86-0.13*Math.log(antall))*antall)*str
-      }
-      return produkt
-    }))
-  }
 
-  function getTotalPris() {
-    let totalPris = 0
-    produkter.forEach(produkt => {
-      totalPris += produkt.pris
-    })
-    return totalPris
-  }
+
+
 
 
   return (
@@ -186,47 +170,36 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-          <svg
-            className="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
-            viewBox="0 0 1155 678"
-          >
-            <path
-              fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)"
-              fillOpacity=".3"
-              d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-            />
-            <defs>
-              <linearGradient
-                id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
-                x1="1155.49"
-                x2="-78.208"
-                y1=".177"
-                y2="474.645"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#9089FC" />
-                <stop offset={1} stopColor="#FF80B5" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
       </div>
     </div>
     <div className='block'>
     <div className='flex ml-6 mb-10'>
       <h1 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#52BEF5] to-sky-300 font-semibold">Priskalkulator</h1>
     </div>
-    {produkter?.map((produkt) => {
-      <Priskalkulator />
-    })}
-    <div onClick={() => {addProdukt()}} className='flex border-2 w-3/4 md:w-1/2 lg:w-1/4 mx-auto rounded-xl hover:cursor-pointer z-50 shadow-md'>
+    {produkter.map((produkt) => (
+      <Priskalkulator key={produkt.id} id={produkt.id} setProdukter={setProdukter}/>
+    ))}
+    <div onClick={()=> {setTimeout(()=>{setProdukter([...produkter, {
+      id: produkter.length + 1,
+      antall: 0,
+      str: 1,
+      pris: 0,
+      cm: 3.8,
+    }])},100)}} className='flex border-2 w-3/4 md:w-1/2 lg:w-1/4 mx-auto rounded-xl hover:cursor-pointer z-50 shadow-md hover:shadow-xl mt-8 mb-12 active:scale-90 transition duration-150'>
       <p className='my-auto pl-4 font-semibold'>Legg til klistremerker</p>
       <div className='ml-auto'><PlusIcon className='w-8 py-2 mr-4'/></div>
     </div>
-    <div className='flex w-3/4 md:w-1/2 lg:w-1/4 mx-auto mt-6'>
-      <p className='font-semibold text-lg pl-4'>Total:</p>
-      <p className='font-semibold text-lg ml-auto pr-2'>{pris}kr</p>
+    {produkter.map((produkt) => (
+        <div key={produkt.id} className='grid grid-cols-3 w-3/4 md:w-1/2 lg:w-1/4 mx-auto mt-6 px-6'>
+          <p className='font-semibold text-lg'>{produkt.cm} cm</p>
+          <p className='mx-auto font-semibold text-lg'>{produkt.antall} stk</p>
+          <p className='ml-auto font-semibold text-lg'>{Math.round(produkt.pris / 50)*50-1} kr</p>
+        </div>
+      ))}
+    <div className='border-b-2 w-3/4 md:w-1/2 lg:w-1/4 mt-4 mx-auto' />
+    <div className='flex w-3/4 md:w-1/2 lg:w-1/4 mx-auto mt-8 px-6'>
+      <p className='font-semibold text-lg'>Total:</p>
+      <p className='font-semibold text-lg ml-auto'>{Math.round(totalPris / 50)*50-1} kr</p>
     </div>
     <div className='flex mb-6 mt-20 max-w-4xl mx-auto'>
       <div className="flex flex-col items-center justify-center pr-8 pl-4">
