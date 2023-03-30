@@ -173,7 +173,7 @@ export default function App() {
       </div>
     </div>
     <div className='block'>
-    <div className='flex ml-6 mb-10'>
+    <div className='flex mb-10 w-3/4 mx-auto'>
       <h1 className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#52BEF5] to-sky-300 font-semibold">Priskalkulator</h1>
     </div>
     {produkter.map((produkt) => (
