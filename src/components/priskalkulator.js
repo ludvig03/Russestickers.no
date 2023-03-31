@@ -130,7 +130,7 @@ export default function Priskalkulator({id, setProdukter}) {
             </div>
         </div>
         <div>
-            <div className='border-b-2 w-1/2 mx-auto'>
+            <div className='border-b-2 h-6 w-5/6 mx-auto rounded-lg'>
             </div>
         </div>
     </div>
