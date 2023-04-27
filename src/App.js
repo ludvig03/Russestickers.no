@@ -155,7 +155,7 @@ export default function App() {
             <img className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl" src="https://i.ibb.co/8D84dVK/U28w3h-Ms-2x.png">
             </img>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Vi leverer kvalitets klistremerker i vinyl og mange størrelser til en fjerdedel av markedspris.
+              Vi leverer kvalitets klistremerker i vinyl og bannere i mange størrelser til halve markedsprisen.
 
             </p>
             <div className="mt-10 items-center justify-center gap-x-6">
