@@ -5,6 +5,8 @@ import Velgoss from './components/velgoss'
 import Priskalkulator from './components/priskalkulator'
 import Footer from './components/footer'
 import Scroll from 'react-scroll-to-element';
+import { inject } from '@vercel/analytics';
+
 
 
 const navigation = [
@@ -15,6 +17,8 @@ const navigation = [
 ]
 
 export default function App() {
+
+  inject()
 
   const [produkter, setProdukter] = useState([
     {
