@@ -5,7 +5,6 @@ import Velgoss from './components/velgoss'
 import Priskalkulator from './components/priskalkulator'
 import Footer from './components/footer'
 import Scroll from 'react-scroll-to-element';
-import { Analytics } from '@vercel/analytics/react';
 
 
 
@@ -226,7 +225,6 @@ export default function App() {
       <img className="w-72 mx-auto" src="https://i.ibb.co/XyvpSbS/Screenshot-2023-03-23-at-14-25-21.png"></img>
     </div>
     <Footer />
-    <Analytics />
     </div>
   )
 }
