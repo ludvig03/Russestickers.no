@@ -18,8 +18,6 @@ const navigation = [
 
 export default function App() {
 
-  inject()
-
   const [produkter, setProdukter] = useState([
     {
       id: 1,
