@@ -44,7 +44,6 @@ export default function App() {
 
   return (
     <div>
-    <Analytics />
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -227,6 +226,7 @@ export default function App() {
       <img className="w-72 mx-auto" src="https://i.ibb.co/XyvpSbS/Screenshot-2023-03-23-at-14-25-21.png"></img>
     </div>
     <Footer />
+    <Analytics />
     </div>
   )
 }
