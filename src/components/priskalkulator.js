@@ -13,7 +13,7 @@ export default function Priskalkulator({id, setProdukter}) {
 
 
     useEffect(() => {
-        setPris(((1.86-0.13*Math.log(slider.x))*slider.x)*str+200);
+        setPris(((1.86-0.13*Math.log(slider.x))*slider.x)*str+300);
     }, [slider.x, str]);
 
     useEffect(() => {
