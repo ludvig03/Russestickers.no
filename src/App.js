@@ -5,7 +5,7 @@ import Velgoss from './components/velgoss'
 import Priskalkulator from './components/priskalkulator'
 import Footer from './components/footer'
 import Scroll from 'react-scroll-to-element';
-import { inject } from '@vercel/analytics';
+import { Analytics } from '@vercel/analytics/react';
 
 
 
@@ -46,6 +46,7 @@ export default function App() {
 
   return (
     <div>
+    <Analytics />
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
